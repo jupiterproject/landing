@@ -1,9 +1,25 @@
+type UserType = {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  address: object;
+  phone: string;
+  website: string;
+  company: object;
+};
+
 export default function StaticTest({ users }: any) {
+  console.table(users);
   return (
     <>
       <div>
-        {users.map((user: any) => {
-          return <p key={user?.id}>{user?.name}</p>;
+        {users.map((user: UserType) => {
+          return (
+            <p key={user?.id}>
+              {user?.name} + {user?.email}
+            </p>
+          );
         })}
       </div>
     </>
