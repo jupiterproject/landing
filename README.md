@@ -6,9 +6,9 @@ This repository has been assigned to the UI team, meaning that only they have ri
 
 ### UI Team:
 
-- Mohit
-- Malav
-- Abdullah
+- Atom
+- Astro
+- Monstahy
 
 ## Stack
 
