@@ -20,7 +20,7 @@ This repository has been assigned to the UI team, meaning that only they have ri
 
 > **Note**: Check each off when it's completed.
 
-- [ ] Create Next.js app
+- [x] Create Next.js app
 - [ ] Link TailwindCSS
 - [ ] Create Navigation
 - [ ] Create Hero
