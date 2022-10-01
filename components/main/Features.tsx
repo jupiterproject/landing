@@ -15,7 +15,8 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
       p="7"
       borderRadius="20px"
       border="2px solid rgba(251, 202, 191, 0.1)"
-      boxShadow="2xl"
+      boxShadow="lg"
+      width="400px"
     >
       <Flex
         w={16}
@@ -41,7 +42,7 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
 
 export default function SimpleThreeColumns() {
   return (
-    <Box p={4}>
+    <Box p={4} display="flex" justifyContent="center" alignItems="center">
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         <Feature
           icon={<Icon as={FcAssistant} w={10} h={10} />}
