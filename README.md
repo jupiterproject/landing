@@ -24,3 +24,6 @@ This repository has been assigned to the UI team, meaning that only they have ri
 - [ ] Link TailwindCSS/Chakra-UI
 - [ ] Create Navigation
 - [ ] Create Hero
+
+## Preview
+<img width="1129" alt="image" src="https://user-images.githubusercontent.com/99760654/193430677-06714bc8-2503-4344-a7db-9d6751a5749b.png">
