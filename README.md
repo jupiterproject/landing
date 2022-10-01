@@ -12,7 +12,7 @@ This repository has been assigned to the UI team, meaning that only they have ri
 
 ## Stack
 
-- Next.js / React 
+- Next.js / React
   - TypeScript
 - TailwindCSS (or Chakra-UI)
 
@@ -21,9 +21,13 @@ This repository has been assigned to the UI team, meaning that only they have ri
 > **Note**: Check each off when it's completed.
 
 - [x] Create Next.js/React app
-- [ ] Link TailwindCSS/Chakra-UI
-- [ ] Create Navigation
-- [ ] Create Hero
+- [x] Link TailwindCSS/Chakra-UI
+- [x] Create Navigation
+- [x] Create Hero
+- [ ] Create Footer
+- [x] Link to Vercel
+- [ ] Connect domain
 
 ## Preview
+
 <img width="1129" alt="image" src="https://user-images.githubusercontent.com/99760654/193430677-06714bc8-2503-4344-a7db-9d6751a5749b.png">
