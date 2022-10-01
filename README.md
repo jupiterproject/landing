@@ -26,4 +26,5 @@ This repository has been assigned to the UI team, meaning that only they have ri
 - [ ] Create Hero
 
 ## Preview
-None yet, coming soon.
+<img width="1129" alt="image" src="https://user-images.githubusercontent.com/99760654/193430647-42e4d0d0-2f1a-4759-943d-8fa7b2745394.png">
+> **Note**: The three components took me like 3 hours
