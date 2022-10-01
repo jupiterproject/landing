@@ -266,42 +266,30 @@ interface NavItem {
 }
 
 const NAV_ITEMS: Array<NavItem> = [
+  // {
+  //   label: "Blog",
+  //   children: [
+  //     {
+  //       label: "Find our posts",
+  //       subLabel: "View all of our blog posts",
+  //       href: "#",
+  //     },
+  //   ],
+  // },
   {
-    label: "Inspiration",
-    children: [
-      {
-        label: "Explore Design Work",
-        subLabel: "Trending Design to inspire you",
-        href: "#",
-      },
-      {
-        label: "New & Noteworthy",
-        subLabel: "Up-and-coming Designers",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Find Work",
-    children: [
-      {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
-        href: "#",
-      },
-      {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Learn Design",
+    label: "Blog",
     href: "#",
   },
   {
-    label: "Hire Designers",
+    label: "About",
+    href: "#",
+  },
+  {
+    label: "Dashboard",
+    href: "#",
+  },
+  {
+    label: "API",
     href: "#",
   },
 ];
