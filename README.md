@@ -20,13 +20,18 @@ This repository has been assigned to the UI team, meaning that only they have ri
 
 > **Note**: Check each off when it's completed.
 
+- [ ] Create Navigation
+- [ ] Create Footer - _Seems accessive and unnecessary_
+- [ ] Run API
+- [ ] Pages
+- [ ] App/responsive
+- [ ] Connect domain
+
+## Completed
 - [x] Create Next.js/React app
 - [x] Link TailwindCSS/Chakra-UI
-- [ ] Create Navigation
 - [x] Create Hero
-- [ ] Create Footer - _Seems accessive and unnecessary_
 - [x] Link to Vercel
-- [ ] Connect domain
 
 ## Preview
 
