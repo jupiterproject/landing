@@ -22,9 +22,9 @@ This repository has been assigned to the UI team, meaning that only they have ri
 
 - [x] Create Next.js/React app
 - [x] Link TailwindCSS/Chakra-UI
-- [x] Create Navigation
+- [ ] Create Navigation
 - [x] Create Hero
-- [ ] Create Footer
+- [ ] Create Footer - _Seems accessive and unnecessary_
 - [x] Link to Vercel
 - [ ] Connect domain
 
