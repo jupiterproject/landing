@@ -12,11 +12,11 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
   return (
     <Stack
       bg="#251F21"
-      p="7"
+      p="10"
       borderRadius="20px"
       border="2px solid rgba(251, 202, 191, 0.1)"
       boxShadow="lg"
-      width="400px"
+      width="100%"
     >
       <Flex
         w={16}
