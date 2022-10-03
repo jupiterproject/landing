@@ -17,6 +17,7 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
       border="2px solid rgba(251, 202, 191, 0.1)"
       boxShadow="lg"
       width="100%"
+      maxW="400px"
     >
       <Flex
         w={16}
