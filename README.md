@@ -1,47 +1,34 @@
-# Landing
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Team association
+## Getting Started
 
-This repository has been assigned to the UI team, meaning that only they have rights to write changes to this. Any unofficial changes must be in the form of a **pull request**.
+First, run the development server:
 
-### UI Team:
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-- Atom
-- Astro
-- Monstahy
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Stack
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-- Next.js / React
-  - TypeScript
-- TailwindCSS (or Chakra-UI)
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-## Todo
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-> **Note**: Check each off when it's completed.
+## Learn More
 
-- [ ] Create Navigation
-<<<<<<< main
-- [ ] Create Footer - _Seems accessive and unnecessary_
-- [ ] Run API
-- [ ] Pages
-- [ ] App/responsive
-- [ ] Connect domain
+To learn more about Next.js, take a look at the following resources:
 
-## Completed
-- [x] Create Next.js/React app
-- [x] Link TailwindCSS/Chakra-UI
-- [x] Create Hero
-- [x] Link to Vercel
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Preview
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-<img width="1129" alt="image" src="https://user-images.githubusercontent.com/99760654/193430677-06714bc8-2503-4344-a7db-9d6751a5749b.png">
-=======
-- [ ] Create Hero
+## Deploy on Vercel
 
-## Preview
-<img width="1129" alt="image" src="https://user-images.githubusercontent.com/99760654/193430647-42e4d0d0-2f1a-4759-943d-8fa7b2745394.png">
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-> **Note**: This took me like 3-4 hours
->>>>>>> main
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

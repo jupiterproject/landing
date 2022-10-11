@@ -1,159 +1,210 @@
-import * as React from "react";
-import {
-  chakra,
-  Container,
-  Stack,
-  HStack,
-  Text,
-  useColorModeValue,
-  Button,
-  Image,
-  Skeleton,
-  Box,
-  Link,
-  Icon,
-} from "@chakra-ui/react";
-// Here we have used react-icons package for the icons
-import { GoChevronRight } from "react-icons/go";
-import { MdBolt } from "react-icons/md";
+/*
+  This example requires Tailwind CSS v2.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+*/
+import { Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { ChevronRightIcon } from "@heroicons/react/solid";
 
-const HeroSection = () => {
+const navigation = [
+  { name: "Product", href: "#" },
+  { name: "Features", href: "#" },
+  { name: "Marketplace", href: "#" },
+  { name: "Company", href: "#" },
+];
+
+export default function Example() {
   return (
-    <Container maxW="8xl" px={{ base: 6, md: 3 }} py={24}>
-      <Stack
-        direction={{ base: "column", md: "row" }}
-        justifyContent="center"
-        spacing={{ base: 0, md: 50, lg: 90 }}
-      >
-        <Stack
-          direction="column"
-          spacing={7}
-          justifyContent="center"
-          maxW="700px"
+    <div className="relative overflow-hidden">
+      <Popover as="header" className="relative">
+        <div className="bg-gray-900 pt-6">
+          <nav
+            className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
+            aria-label="Global"
+          >
+            <div className="flex items-center flex-1">
+              <div className="flex items-center justify-between w-full md:w-auto">
+                <a href="#">
+                  <span className="sr-only">Workflow</span>
+                </a>
+                <div className="-mr-2 flex items-center md:hidden">
+                  <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
+                    <span className="sr-only">Open main menu</span>
+                    <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                  </Popover.Button>
+                </div>
+              </div>
+              <div className="hidden space-x-8 md:flex md:ml-10">
+                {navigation.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-base font-medium text-white hover:text-gray-300"
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div className="hidden md:flex md:items-center md:space-x-6">
+              <a
+                href="#"
+                className="text-base font-medium text-white hover:text-gray-300"
+              >
+                Log in
+              </a>
+              <a
+                href="#"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-400 hover:bg-indigo-600 transition ease-in-out duration-150"
+              >
+                Start free trial
+              </a>
+            </div>
+          </nav>
+        </div>
+
+        <Transition
+          as={Fragment}
+          enter="duration-150 ease-out"
+          enterFrom="opacity-0 scale-95"
+          enterTo="opacity-100 scale-100"
+          leave="duration-100 ease-in"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-95"
         >
-          <HStack
-            as={Link}
-            p={1}
-            rounded="full"
-            fontSize="sm"
-            w="max-content"
-            bg={useColorModeValue("gray.300", "gray.700")}
-            fontFamily="Inter"
+          <Popover.Panel
+            focus
+            className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top md:hidden"
           >
-            <Box
-              py={2}
-              px={3}
-              lineHeight={1}
-              rounded="full"
-              color="black"
-              fontWeight="bold"
-              bg="#FBCABF"
-            >
-              What&apos;s new
-            </Box>
-            <HStack spacing={1} alignItems="center" justifyContent="center">
-              <Text lineHeight={1}>Jupiter just launched!</Text>
-              <Icon as={GoChevronRight} w={4} h={4} />
-            </HStack>
-          </HStack>
-          <chakra.h1
-            fontSize="5xl"
-            lineHeight={1}
-            fontWeight="extrabold"
-            textAlign="left"
-            fontFamily="Inter Tight"
-          >
-            Your schedule, assignments <br />
-            <chakra.span color="#FBCABF">all in one place</chakra.span>.
-          </chakra.h1>
-          <Text
-            fontSize="1.1rem"
-            textAlign="left"
-            lineHeight="1.375"
-            fontWeight="400"
-            color="gray.500"
-            fontFamily="Inter"
-          >
-            Jupiter is free, open-source, and privacy-focused. View your Google
-            Classroom assignments and class schedules{" "}
-            <strong style={{ fontFamily: "Inter Tight" }}>
-              all in one simple dashboard.
-            </strong>
-          </Text>
-          <HStack
-            spacing={{ base: 0, sm: 2 }}
-            mb={{ base: "3rem !important", sm: 0 }}
-            flexWrap="wrap"
-          >
-            <Button
-              bg="#FBCABF"
-              px="6"
-              color="black"
-              _hover={{
-                bg: "#F8BBAE",
-              }}
-            >
-              Get Started
-            </Button>
-            <Button>Learn More</Button>
-          </HStack>
-        </Stack>
-        <Box ml={{ base: 0, md: 5 }} pos="relative">
-          <DottedBox />
-          <Image
-            w="100%"
-            h="100%"
-            minW={{ base: "auto", md: "30rem" }}
-            objectFit="cover"
-            alt="Hero image"
-            src={`https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&q=80&
-            fm=jpg&crop=entropy&cs=tinysrgb&auto=format&fit=crop&w=334&q=80`}
-            style={{ borderRadius: "2rem" }}
-            rounded="md"
-            fallback={<Skeleton />}
-          />
-        </Box>
-      </Stack>
-    </Container>
-  );
-};
+            <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+              <div className="px-5 pt-4 flex items-center justify-between">
+                <div></div>
+                <div className="-mr-2">
+                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
+                    <span className="sr-only">Close menu</span>
+                    <XIcon className="h-6 w-6" aria-hidden="true" />
+                  </Popover.Button>
+                </div>
+              </div>
+              <div className="pt-5 pb-6">
+                <div className="px-2 space-y-1">
+                  {navigation.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50"
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+                <div className="mt-6 px-5">
+                  <a
+                    href="#"
+                    className="block text-center w-full py-3 px-4 rounded-md shadow bg-indigo-600 text-white font-medium hover:bg-indigo-700"
+                  >
+                    Start free trial
+                  </a>
+                </div>
+                <div className="mt-6 px-5">
+                  <p className="text-center text-base font-medium text-gray-500">
+                    Existing customer?{" "}
+                    <a href="#" className="text-gray-900 hover:underline">
+                      Login
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Popover.Panel>
+        </Transition>
+      </Popover>
 
-function DottedBox() {
-  return (
-    <Box
-      position="absolute"
-      left="-45px"
-      top="-30px"
-      height="full"
-      maxW="700px"
-      zIndex={-1}
-    >
-      <svg
-        color={useColorModeValue("rgba(55,65,81, 0.1)", "rgba(55,65,81, 0.7)")}
-        width="350"
-        height="420"
-        fill="none"
-      >
-        <defs>
-          <pattern
-            id="5d0dd344-b041-4d26-bec4-8d33ea57ec9b"
-            x="0"
-            y="0"
-            width="20"
-            height="20"
-            patternUnits="userSpaceOnUse"
-          >
-            <rect x="0" y="0" width="4" height="4" fill="currentColor"></rect>
-          </pattern>
-        </defs>
-        <rect
-          width="404"
-          height="404"
-          fill="url(#5d0dd344-b041-4d26-bec4-8d33ea57ec9b)"
-        ></rect>
-      </svg>
-    </Box>
+      <main>
+        <div className="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+          <div className="mx-auto max-w-7xl lg:px-8">
+            <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+              <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
+                <div className="lg:py-24">
+                  <a
+                    href="#"
+                    className="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
+                  >
+                    <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">
+                      We&apos;ve launched
+                    </span>
+                    <span className="ml-4 text-sm">Visit our </span>
+                    <ChevronRightIcon
+                      className="ml-2 w-5 h-5 text-gray-500"
+                      aria-hidden="true"
+                    />
+                  </a>
+                  <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                    <span className="block">A better way to</span>
+                    <span className="block text-indigo-400">ship web apps</span>
+                  </h1>
+                  <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
+                    qui Lorem cupidatat commodo. Elit sunt amet fugiat veniam
+                    occaecat fugiat.
+                  </p>
+                  <div className="mt-10 sm:mt-12">
+                    <form action="#" className="sm:max-w-xl sm:mx-auto lg:mx-0">
+                      <div className="sm:flex">
+                        <div className="min-w-0 flex-1">
+                          <label htmlFor="email" className="sr-only">
+                            Email address
+                          </label>
+                          <input
+                            id="email"
+                            type="email"
+                            placeholder="Enter your email"
+                            className="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
+                          />
+                        </div>
+                        <div className="mt-3 sm:mt-0 sm:ml-3">
+                          <button
+                            type="submit"
+                            className="block w-full py-3 px-4 rounded-md shadow bg-indigo-500 text-white font-medium hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
+                          >
+                            Start free trial
+                          </button>
+                        </div>
+                      </div>
+                      <p className="mt-3 text-sm text-gray-300 sm:mt-4">
+                        Start your free 14-day trial, no credit card necessary.
+                        By providing your email, you agree to our{" "}
+                        <a href="#" className="font-medium text-white">
+                          terms of service
+                        </a>
+                        .
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
+                <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* More main page content here... */}
+      </main>
+    </div>
   );
 }
-
-export default HeroSection;
