@@ -21,7 +21,6 @@ This repository has been assigned to the UI team, meaning that only they have ri
 > **Note**: Check each off when it's completed.
 
 - [ ] Create Navigation
-<<<<<<< main
 - [ ] Create Footer - _Seems accessive and unnecessary_
 - [ ] Run API
 - [ ] Pages
@@ -42,6 +41,3 @@ This repository has been assigned to the UI team, meaning that only they have ri
 
 ## Preview
 <img width="1129" alt="image" src="https://user-images.githubusercontent.com/99760654/193430647-42e4d0d0-2f1a-4759-943d-8fa7b2745394.png">
-
-> **Note**: This took me like 3-4 hours
->>>>>>> main
