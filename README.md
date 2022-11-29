@@ -22,7 +22,7 @@ This repository has been assigned to the UI team, meaning that only they have ri
 
 - [ ] Create Navigation
 - [ ] Create Footer - _Seems accessive and unnecessary_
-- [ ] Run API
+- [ ] Run API - Never gonna happen _=p_
 - [ ] Pages
 - [ ] App/responsive
 - [ ] Connect domain
